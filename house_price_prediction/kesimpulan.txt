@@ -1,0 +1,36 @@
+- Ukuran dataset yaitu 545 baris dan 13 kolom
+- Tidak ada data yang kosong dan terduplikat
+- Tidak ada data anomali dalam tiap baris
+- Tipe data terdiri dari int64 dan object
+- Kolom numerik:
+	- Kebanyakan data kita memiliki area 3000ft s/d 5000ft 
+	- Jumlah kamar tidur paling banyak 3 kamar
+	- Jumlah kamar mandi paling banyak 1 ruang
+	- Jumlah stories/lantai paling banyak 1 - 2 lantai
+	- Banyak rumah yang tidak memiliki tempat parkir
+	- Kolom numerik terindikasi pencilan/outliers
+
+- Kolom kategorik: 
+	- Banyak yang berlokasi di dekat jalan utama (mainroad)
+	- Banyak yang tidak memiliki ruang tamu (guestroom)
+	- Banyak yang tidak memiliki basement
+	- Banyak yang tidak memiliki pemanas air (waterheating)
+	- Banyak yang tidak memiliki AC (air conditioning)
+	- Banyak yang berada di area yang tidak disukai (prefea). Bisa jadi karena lingkungan dan fasilitas umum
+	- Kebanyakan properti semi-furnished daripada unfurnished dan furnished
+
+- Kolom target:
+	- Rata-rata harga properti berkisar 47.000.000
+
+- Visualisasi berdasarkan target:
+	- Kolom target:
+		- Kolom area memiliki korelasi dengan kolom target(price). Bisa dilihat dari persebaran dimana ketika area semakin luas harga juga semakin naik
+		- Kolom bedrooms memiliki korelasi yang lumayan sedikit. Bisa dilihat ketika jumlah kamar semakin banyak maka harga(price) juga naik, akan tetapi jika kamar lebih dari 4 properti tersebut tidak banyak yang berminat
+		- Begitupun dengan kolom kamar mandi, jika jumlah kamar mandi semakin banyak maka harga(price) juga naik, akan tetapi jika kamar mandi lebih dari 3 properti tersebut tidak banyak yang berminat
+		- Kolom stories, paling banyak properti dengan 1 - 2 lantai
+		- Kolom parkir, properti lebih banyak tidak punya ruang parkir (0) - 2 ruang parkir
+	- Kolom kategorik: 
+		- Tidak ada korelasi untuk kolom kategorik
+
+- Visualisasi Heatmap:
+	- Kolom total luas area dan jumlah kamar mandi memiliki korelasi lebih dari 50%
